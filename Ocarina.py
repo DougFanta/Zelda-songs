@@ -33,7 +33,7 @@ def lista():                               # função que mostra os códigos par
         print(i)
     print(' ')
 
-    mixer.music.load('menu_turn_left.wav')  # musica de efeito
+    mixer.music.load('musicas/menu_turn_left.wav')  # musica de efeito
     mixer.music.play()
     tempo = time.Clock()
     tempo.tick(10)
@@ -52,7 +52,7 @@ def lista():                               # função que mostra os códigos par
 
 def musicas():    # função principal do programa onde se toca as musicas
 
-    mixer.music.load('PauseMenu_Open.mp3')
+    mixer.music.load('musicas/PauseMenu_Open.mp3')
     mixer.music.play()
     tempo = time.Clock()
     tempo.tick(0)
@@ -66,56 +66,56 @@ def musicas():    # função principal do programa onde se toca as musicas
         print(lista())
 
     elif m == 'awdawd':
-        a = 'Zeldas lullaby.mp3'
+        a = 'musicas/Zeldas lullaby.mp3'
 
-        print("\033[1;35m", a[:14])
+        print("\033[1;35mZeldas lullaby")
 
     elif m == 'wadwad':
-        a = 'Eponas Song.mp3'
-        print("\033[1;33m", a[:11])
+        a = 'musicas/Eponas Song.mp3'
+        print("\033[1;33mEponas Song")
 
     elif m == 'sdasda':
-        a = 'Lost Woods.mp3'
-        print("\033[1;32m", a[:10])
+        a = 'musicas/Lost Woods.mp3'
+        print("\033[1;32mLost Woods")
 
     elif m == 'dswdsw':
-        a = 'Suns Song.mp3'
-        print("\033[1;33m", a[:9])
+        a = 'musicas/Suns Song.mp3'
+        print("\033[1;33mLost Woods")
 
     elif m == 'dxsdxs':
-        a = 'Song of Time.mp3'
-        print("\033[1;36m", a[:12])
+        a = 'musicas/Song of Time.mp3'
+        print("\033[1;36mSong of Time")
 
     elif m == 'xswxsw':
-        a = 'Song of Storms.mp3'
-        print("\033[1;36m", a[:14])
+        a = 'musicas/Song of Storms.mp3'
+        print("\033[1;36mSong of Storms")
 
     elif m == 'xwadad':
-        a = 'Minuet of Forest.mp3'
-        print("\033[1;32m", a[:16])
+        a = 'musicas/Minuet of Forest.mp3'
+        print("\033[1;32mMinuet of Forest")
 
     elif m == 'sxsxdsds':
-        a = 'Bolero of Fire.mp3'
-        print("\033[1;31m", a[:14])
+        a = 'musicas/Bolero of Fire.mp3'
+        print("\033[1;31mBolero of Fire")
 
     elif m == 'xsdda':
-        a = 'Serenade of Water.mp3'
-        print("\033[1;34m", a[:17])
+        a = 'musicas/Serenade of Water.mp3'
+        print("\033[1;34mSerenade of Water")
 
     elif m == 'xsxsdsx':
-        a = 'Requiem of Spirit.mp3'
-        print("\033[1;30m", a[:17])
+        a = 'musicas/Requiem of Spirit.mp3'
+        print("\033[1;30mRequiem of Spirit")
 
     elif m == 'addxads':
-        a = 'Nocturne of Shadow.mp3'
-        print("\033[1;37m", a[:18])
+        a = 'musicas/Nocturne of Shadow.mp3'
+        print("\033[1;37mNocturne of Shadow")
 
     elif m == 'wdwdaw':
-        a = 'Prelude of light.mp3'
-        print("\033[1;33m", a[:16])
+        a = 'musicas/Prelude of light.mp3'
+        print("\033[1;33mPrelude of light")
 
     elif m == 'e':
-        mixer.music.load('PauseMenu_Close.mp3')
+        mixer.music.load('musicas/PauseMenu_Close.mp3')
         mixer.music.play()
         tempo = time.Clock()
         tempo.tick(0)
@@ -130,14 +130,14 @@ def musicas():    # função principal do programa onde se toca as musicas
     if a == ' ':
 
         print("\033[4;31mType another sequence\033[m")
-        mixer.music.load('Song_Error.wav')
+        mixer.music.load('musicas/Song_Error.wav')
         mixer.music.play()
         tempo = time.Clock()
         tempo.tick(0)
         while mixer.music.get_busy():
             tempo.tick(10)
     else:
-        vet = ['Song_Correct.mp3', a]
+        vet = ['musicas/Song_Correct.mp3', a]
         for i in vet:
             mixer.music.load(i)
             mixer.music.play()
@@ -152,4 +152,4 @@ def musicas():    # função principal do programa onde se toca as musicas
 
 # print para startar tudo
 
-print(musicas())
+musicas()

@@ -80,7 +80,7 @@ def musicas():    # função principal do programa onde se toca as musicas
 
     elif sequence == 'dswdsw':
         song = 'musicas/Suns Song.ogg'
-        print("\033[1;33mLost Woods")
+        print("\033[1;33mSun's Song")
 
     elif sequence == 'dxsdxs':
         song = 'musicas/Song of Time.ogg'

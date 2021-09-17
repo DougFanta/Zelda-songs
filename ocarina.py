@@ -57,7 +57,7 @@ def musicas():    # função principal do programa onde se toca as musicas
         
     try:
 
-        sequence = input(str('\033[1;30;mMake a sequence using \033[1;31mW A S D X\033[1;30;m to play one song or help to open the song list or E to exit :\033[m')).strip().lower()
+        sequence = input(str('\033[1;30;mMake a sequence using \033[1;31mW, A, S, D or X\033[1;30;m to play one song or help to open the song list or E to exit :\033[m')).strip().lower()
     
         song = ' '
 

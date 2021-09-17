@@ -1,6 +1,23 @@
 # Zelda-songs
-Para que o sistema funcione é necessário fazer o download da Lib Pygame
+A simple and fun player of Zelda's Ocarina of time Ocarina songs
+
+# Overview
+To play a song just type a sequence if you need help just type help to see all sequences
+
+# Instal
 ```
-pip install pygame
+pip install -r requirements --user
 ```
-Versão do Python 3.6
+
+# Execute
+
+To execute just go to project's folder and type
+
+```
+python ocarina.py
+
+```
+
+Enjoy!
+
+If you like this project, please give a star.

@@ -16,7 +16,7 @@ mixer.init() # Inicialização do mixer
 
 
 print('\033[1;36m-\033[m\033[1;32m=\033[m\033[1;31m-' * 27)
-print('                      \033[1;32mZELDA OCARINA OF TIME SONGS') # read do programa
+print('                      \033[1;32mZELDA OCARINA OF TIME SONGS') 
 print('\033[1;36m-\033[m\033[1;32m=\033[m\033[1;31m-' * 27)
 
 
@@ -31,7 +31,7 @@ def lista():                               # função que mostra os códigos par
 
     for i in songs:
         print(i)
-    print(' ')
+    print('\n')
 
     mixer.music.load('musicas/menu_turn_left.ogg')  # musica de efeito
     mixer.music.play()
@@ -40,11 +40,7 @@ def lista():                               # função que mostra os códigos par
     while mixer.music.get_busy():
         tempo.tick(10)
 
-    enter_sequence = input('\033[4;32;36mPress ENTER to write a sequence\033[m')
-    if enter_sequence == '':
-        print(musicas())
-    else:
-        print(lista())
+    musicas()
 
 
     # repetição escolha para ir para a função que toca música
@@ -58,96 +54,112 @@ def musicas():    # função principal do programa onde se toca as musicas
     tempo.tick(0)
     while mixer.music.get_busy():
         tempo.tick(10)
+        
+    try:
 
-    sequence = input(str('\033[1;30;mMake a sequence using \033[1;31mW A S D X\033[1;30;m to play one song or help to open the song list or E to exit :\033[m')).strip().lower()
-    song = ' '
+        sequence = input(str('\033[1;30;mMake a sequence using \033[1;31mW A S D X\033[1;30;m to play one song or help to open the song list or E to exit :\033[m')).strip().lower()
+    
+        song = ' '
 
-    if sequence == 'help':
-        print(lista())
 
-    elif sequence == 'awdawd':
-        song = 'musicas/Zeldas lullaby.ogg'
+        if sequence == 'help':
+            lista()
 
-        print("\033[1;35mZeldas lullaby")
+        elif sequence == 'awdawd':
+            song = 'musicas/Zeldas_lullaby.ogg'
 
-    elif sequence == 'wadwad':
-        song = 'musicas/Eponas Song.ogg'
-        print("\033[1;33mEponas Song")
+            print("\033[1;35mZeldas lullaby")
 
-    elif sequence == 'sdasda':
-        song = 'musicas/Lost Woods.ogg'
-        print("\033[1;32mLost Woods")
+        elif sequence == 'wadwad':
+            song = 'musicas/Eponas_Song.ogg'
+            print("\033[1;33mEponas Song")
 
-    elif sequence == 'dswdsw':
-        song = 'musicas/Suns Song.ogg'
-        print("\033[1;33mSun's Song")
+        elif sequence == 'sdasda':
+            song = 'musicas/Lost_Woods.ogg'
+            print("\033[1;32mLost Woods")
 
-    elif sequence == 'dxsdxs':
-        song = 'musicas/Song of Time.ogg'
-        print("\033[1;36mSong of Time")
+        elif sequence == 'dswdsw':
+            song = 'musicas/Suns_Song.ogg'
+            print("\033[1;33mSun's Song")
 
-    elif sequence == 'xswxsw':
-        song = 'musicas/Song of Storms.ogg'
-        print("\033[1;36mSong of Storms")
+        elif sequence == 'dxsdxs':
+            song = 'musicas/Song_of_Time.ogg'
+            print("\033[1;36mSong of Time")
 
-    elif sequence == 'xwadad':
-        song = 'musicas/Minuet of Forest.ogg'
-        print("\033[1;32mMinuet of Forest")
+        elif sequence == 'xswxsw':
+            song = 'musicas/Song_of_Storms.ogg'
+            print("\033[1;36mSong of Storms")
 
-    elif sequence == 'sxsxdsds':
-        song = 'musicas/Bolero of Fire.ogg'
-        print("\033[1;31mBolero of Fire")
+        elif sequence == 'xwadad':
+            song = 'musicas/Minuet_of_Forest.ogg'
+            print("\033[1;32mMinuet of Forest")
 
-    elif sequence == 'xsdda':
-        song = 'musicas/Serenade of Water.ogg'
-        print("\033[1;34mSerenade of Water")
+        elif sequence == 'sxsxdsds':
+            song = 'musicas/Bolero_of_Fire.ogg'
+            print("\033[1;31mBolero of Fire")
 
-    elif sequence == 'xsxsdsx':
-        song = 'musicas/Requiem of Spirit.ogg'
-        print("\033[1;30mRequiem of Spirit")
+        elif sequence == 'xsdda':
+            song = 'musicas/Serenade_of_Water.ogg'
+            print("\033[1;34mSerenade of Water")
 
-    elif sequence == 'addxads':
-        song = 'musicas/Nocturne of Shadow.ogg'
-        print("\033[1;37mNocturne of Shadow")
+        elif sequence == 'xsxsdsx':
+            song = 'musicas/Requiem_of)Spirit.ogg'
+            print("\033[1;30mRequiem of Spirit")
 
-    elif sequence == 'wdwdaw':
-        song = 'musicas/Prelude of light.ogg'
-        print("\033[1;33mPrelude of light")
+        elif sequence == 'addxads':
+            song = 'musicas/Nocturne_of_Shadow.ogg'
+            print("\033[1;37mNocturne of Shadow")
 
-    elif sequence == 'e':
-        mixer.music.load('musicas/PauseMenu_Close.ogg')
-        mixer.music.play()
-        tempo = time.Clock()
-        tempo.tick(0)
-        while mixer.music.get_busy():
-            tempo.tick(10)
+        elif sequence == 'wdwdaw':
+            song = 'musicas/Prelude_of_Light.ogg'
+            print("\033[1;33mPrelude of light")
 
-        exit(0)
+        elif sequence == 'secret':
+            song = 'musicas/Secret.ogg'
+            print("\033[1;37mSecret song")
 
-    else:
-        print('\033[1;32mWrong Sequence')
-
-    if song == ' ':
-
-        print("\033[4;31mType another sequence\033[m")
-        mixer.music.load('musicas/Song_Error.ogg')
-        mixer.music.play()
-        tempo = time.Clock()
-        tempo.tick(0)
-        while mixer.music.get_busy():
-            tempo.tick(10)
-    else:
-        vet = ['musicas/Song_Correct.ogg', song]
-        for i in vet:
-            mixer.music.load(i)
+        elif sequence == 'e':
+            mixer.music.load('musicas/PauseMenu_Close.ogg')
             mixer.music.play()
-            mixer.music.set_volume(0.1)
             tempo = time.Clock()
             tempo.tick(0)
             while mixer.music.get_busy():
                 tempo.tick(10)
 
-    print(musicas())
+            exit(0)
+
+        else:
+            print('\033[1;32mWrong Sequence')
+
+
+        if song == ' ':
+
+            print("\033[4;31mType another sequence\033[m")
+            mixer.music.load('musicas/Song_Error.ogg')
+            mixer.music.play()
+            tempo = time.Clock()
+            tempo.tick(0)
+            while mixer.music.get_busy():
+                tempo.tick(10)
+        else:
+            vet = ['musicas/Song_Correct.ogg', song]
+            for i in vet:
+                mixer.music.load(i)
+                mixer.music.play()
+                mixer.music.set_volume(0.1)
+                tempo = time.Clock()
+                tempo.tick(0)
+                while mixer.music.get_busy():
+                    tempo.tick(10)
+
+    except EOFError:
+        print('Please type an sequence')
+        musicas()
+
+    except KeyboardInterrupt:   
+        exit(0)
+    
+    musicas()
 
 
 # print para startar tudo
